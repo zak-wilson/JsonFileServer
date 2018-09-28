@@ -31,7 +31,7 @@ const saveCharacter = async (req, res) => {
     if (!req.body.name) return res.send('');
 
     await writeFile(`./characters/${req.body.name}.json`, JSON.stringify(req.body, null, 2));
-    return res.send('');
+    return res.send({});
 };
 
 app.get('/', getAllCharacters);
