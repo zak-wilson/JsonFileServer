@@ -38,4 +38,4 @@ app.get('/', getAllCharacters);
 app.get('/:character', getCharacter);
 app.post('/', saveCharacter);
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(process.env.PORT || port, () => console.log(`Example app listening on port ${port}!`));
